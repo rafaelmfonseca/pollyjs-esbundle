@@ -22,8 +22,8 @@ window.$pollyIntercept = (options) => {
   const server = polly.server;
 
   if (request && typeof request === 'function') {
-    server.any().on('request', (req, res) => {
-      request(req, res);
+    server.any().on('request', (req) => {
+      request(req);
     });
   }
 
