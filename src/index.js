@@ -15,7 +15,7 @@ window.$pollyIntercept = (options) => {
 
   const polly = new Polly('Polly Session', {
     adapters: ['xhr', 'fetch'],
-    persister: 'in-memory-persister',
+    persister: InMemoryPersister,
     logLevel: 'silent'
   });
 
