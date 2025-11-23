@@ -1,0 +1,38 @@
+{
+  "author": "Rafael Fonseca",
+  "name": "pollyjs-esbundle",
+  "version": "1.0.0",
+  "description": "A bundled version of Polly.JS configured for use in Tampermonkey scripts.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelmfonseca/pollyjs-esbundle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rafaelmfonseca/pollyjs-esbundle/issues"
+  },
+  "homepage": "https://github.com/rafaelmfonseca/pollyjs-esbundle#readme",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild ./src/index.js --bundle --outfile=./dist/bundle.js --minify"
+  },
+  "keywords": [
+    "pollyjs",
+    "tampermonkey",
+    "userscript",
+    "mock",
+    "network",
+    "intercept",
+    "bundle"
+  ],
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@pollyjs/adapter-fetch": "^6.0.7",
+    "@pollyjs/adapter-xhr": "^6.0.6",
+    "@pollyjs/core": "^6.0.6",
+    "@pollyjs/persister": "^6.0.6"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.0"
+  }
+}
