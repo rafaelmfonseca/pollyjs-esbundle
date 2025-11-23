@@ -23,13 +23,13 @@ window.$pollyIntercept = (options) => {
 
   if (request && typeof request === 'function') {
     server.any().on('request', (req, res) => {
-      callback(req, res);
+      request(req, res);
     });
   }
 
   if (response && typeof response === 'function') {
     server.any().on('response', (req, res) => {
-      callback(req, res);
+      response(req, res);
     });
   }
 
